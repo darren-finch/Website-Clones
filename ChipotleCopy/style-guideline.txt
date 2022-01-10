@@ -1,0 +1,7 @@
+Accent color: #AD2117
+Primary color: #451500
+Secondary color: #A76820
+
+Background color: white
+Text color on dark: white
+Text color on light: #451500

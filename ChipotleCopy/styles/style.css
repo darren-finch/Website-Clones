@@ -1,0 +1,419 @@
+.separator {
+  margin-left: 5px;
+  margin-right: 10px;
+  height: 21px;
+  width: 1px;
+  border-right: 1px solid #fff;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #fff;
+  color: #451500;
+  letter-spacing: 0.05rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Trade Gothic LT Bold", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: 4rem;
+}
+
+h2,
+.h2 {
+  font-size: 3rem;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  font-size: 22px;
+}
+
+a,
+a:hover,
+a:visited {
+  font-family: "Nunito", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-decoration: none;
+}
+
+p {
+  font-size: 22px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex__item {
+  flex: 1 1 auto;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+.btn {
+  background-color: #451500;
+  color: #fff;
+  padding: 0.8125rem 2.625rem;
+}
+
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bottom-border {
+  margin-top: 1rem;
+  width: 100%;
+  height: 1px;
+  background-color: #451500;
+  opacity: 0.2;
+}
+
+.text--fine {
+  font-size: 0.75rem;
+}
+
+.text--small {
+  font-size: 0.9rem;
+}
+
+.text--normal {
+  font-size: 22px;
+}
+
+.text--large {
+  font-size: 2rem;
+}
+
+.text--extra-large {
+  font-size: 3rem;
+}
+
+.text--title {
+  font-size: 4rem;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.main-header {
+  padding: 0 1.875rem;
+  height: 6.25rem;
+}
+.main-header__logo-block {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.main-header__sign-in {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 40em) {
+  .main-header__sign-in {
+    display: none;
+  }
+}
+.main-header__sign-in-text {
+  color: #786259;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+.main-header__nav-items {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  list-style: none;
+  padding: 0 1em;
+}
+.main-header__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  white-space: nowrap;
+}
+.main-header__nav-item-text {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #451500;
+  font-weight: 700;
+  margin: 0;
+}
+@media (max-width: 77em) {
+  .main-header__nav-item-text {
+    font-size: 0.8rem;
+  }
+}
+.main-header__cta {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-header__cta-button {
+  background: linear-gradient(90deg, #a76820 50%, #451500 0);
+  background-position: 100% 100%;
+  background-size: 200% 100%;
+  display: inline-flex;
+  min-width: 200px;
+  height: 40px;
+  border-radius: 1.5em;
+  align-items: center;
+  transition: all 0.2s;
+}
+.main-header__cta-button-text {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.8125rem;
+  letter-spacing: 1.15px;
+}
+.main-header__cta-button-logo {
+  height: 1.625rem;
+  width: 1.625rem;
+  margin-left: 0.625rem;
+}
+
+.hero-section {
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 64em) {
+  .hero-section {
+    height: 450px;
+  }
+}
+.hero-section__background {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 100;
+  width: 100%;
+  height: 100%;
+}
+.hero-section__content {
+  width: 480px;
+  height: 75%;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  row-gap: 20px;
+}
+.hero-section__cta {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 15rem;
+  padding: 1rem;
+  background-color: #ad2117;
+  color: #fff;
+}
+
+.chipotle-rewards-section {
+  max-width: 75%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
