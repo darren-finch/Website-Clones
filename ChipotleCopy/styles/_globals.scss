@@ -202,35 +202,6 @@ p {
 
 // LAYOUTS, ELEMENTS, THEN MODIFIERS
 
-.flex {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	&__item {
-		flex: 1 1 auto;
-	}
-}
-
-.split {
-	display: flex;
-	flex-direction: column;
-}
-
-@include breakpoint-up(medium) {
-	.split {
-		flex-direction: row;
-	}
-
-	.split > * {
-		flex-basis: 100%;
-	}
-
-	.split > * + * {
-		margin-left: 2em;
-	}
-}
-
 .btn {
 	background-color: $primary-color;
 	color: $white;
@@ -248,35 +219,4 @@ p {
 	height: 1px;
 	background-color: $primary-color;
 	opacity: 0.2;
-}
-
-.text--fine {
-	font-size: $font-size--fine;
-}
-.text--small {
-	font-size: $font-size--small;
-}
-.text--normal {
-	font-size: $font-size--normal;
-}
-.text--large {
-	font-size: $font-size--large;
-}
-.text--extra-large {
-	font-size: $font-size--extra-large;
-}
-.text--title {
-	font-size: $font-size--title;
-}
-
-.hide-for-mobile {
-	@include breakpoint-down(medium) {
-		display: none;
-	}
-}
-
-.hide-for-desktop {
-	@include breakpoint-up(large) {
-		display: none;
-	}
 }
