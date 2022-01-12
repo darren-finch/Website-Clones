@@ -1,4 +1,4 @@
-.separator {
+.main-header__cta-btn-separator {
   margin-left: 5px;
   margin-right: 10px;
   height: 21px;
@@ -172,12 +172,12 @@ h6,
 
 h1,
 .h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2,
 .h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h3,
@@ -191,7 +191,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 a,
@@ -205,33 +205,6 @@ p {
   font-size: 22px;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.flex__item {
-  flex: 1 1 auto;
-}
-
-.split {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 40em) {
-  .split {
-    flex-direction: row;
-  }
-
-  .split > * {
-    flex-basis: 100%;
-  }
-
-  .split > * + * {
-    margin-left: 2em;
-  }
-}
 .btn {
   background-color: #451500;
   color: #fff;
@@ -251,26 +224,26 @@ p {
   opacity: 0.2;
 }
 
-.text--fine {
-  font-size: 0.75rem;
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
-
-.text--small {
-  font-size: 0.9rem;
+.main-header > * {
+  display: flex;
+  align-items: center;
 }
-
-.text--normal {
-  font-size: 22px;
+.main-header__logo-wrapper {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
-
-.text--large {
-  font-size: 2rem;
+.main-header__logo {
+  width: 58px;
 }
-
-.text--extra-large {
-  font-size: 3rem;
+.main-header__sign-in-link {
+  display: none;
 }
-
-.text--title {
-  font-size: 4rem;
+.main-header__nav-wrapper {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
