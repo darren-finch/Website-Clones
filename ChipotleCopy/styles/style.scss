@@ -3,29 +3,490 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem;
+	height: 100px;
 
 	& > * {
 		display: flex;
 		align-items: center;
+		flex: 1 1 100%;
+	}
+
+	&__hamburger {
+		@media (min-width: 75em) {
+			display: none;
+		}
+
+		@media (max-width: 23.5em) {
+			margin-right: 1rem;
+		}
 	}
 
 	&__logo-wrapper {
+		margin-left: 1rem;
 		column-gap: 0.5rem;
 	}
 
 	&__logo {
 		width: 58px;
+
+		@media (max-width: 23.5em) {
+			display: none;
+		}
+
+		@media (min-width: 75em) {
+			width: 81px;
+		}
 	}
 
-	&__sign-in-link {
+	&__sign-in {
 		display: none;
+
+		&-text {
+			color: $white;
+			font-weight: 500;
+			color: #786259;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			letter-spacing: 0.05em;
+		}
+
+		@media (min-width: 36em) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
-	&__nav-wrapper {
+	&__nav {
 		display: none;
+
+		@media (min-width: 75em) {
+			display: flex;
+			column-gap: 1.5rem;
+		}
+	}
+
+	&__nav-link {
+		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+		font-weight: 700;
+		color: #451400;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		flex-grow: 1;
+		white-space: nowrap;
+		position: relative;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	&__nav-link-text {
+		position: relative;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+		font-weight: 900;
+		color: #451400;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		font-weight: 500;
 	}
 
 	&__cta-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-right: 1rem;
+
+		@media (min-width: 75em) {
+			justify-content: flex-end;
+		}
 	}
+
+	&__cta-btn {
+		background: $primary-color;
+		display: inline-flex;
+		border-radius: 1.5em;
+		cursor: pointer;
+		text-decoration: none;
+		user-select: none;
+		max-height: 40px;
+		min-width: 200px;
+		min-height: 40px;
+		align-items: center;
+		transition: all 0.2s;
+
+		&-logo {
+			height: 26px;
+			width: 26px;
+			margin-left: 10px;
+		}
+
+		&-text {
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: #fff;
+			font-size: 0.8125rem;
+			letter-spacing: 1.15px;
+		}
+	}
+}
+
+.hero-section {
+	height: 450px;
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__video-bg {
+		position: absolute;
+		object-fit: cover;
+		top: 100;
+		width: 100%;
+		height: inherit;
+
+		&--mobile {
+			display: block;
+		}
+
+		&--desktop {
+			display: none;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		max-width: 460px;
+		height: 75%;
+		text-align: center;
+		line-height: 2rem;
+		row-gap: 1rem;
+		z-index: 1;
+	}
+
+	&__cta-btn {
+		color: $white;
+		background-color: $accent-color;
+		width: 300px;
+	}
+
+	@media (min-width: 40em) {
+		&__video-bg--mobile {
+			display: none;
+		}
+		&__video-bg--desktop {
+			display: block;
+		}
+	}
+}
+
+.rewards-section {
+	border-bottom: 1px solid $primary-color-quarter-opacity;
+
+	& > div {
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		row-gap: 1rem;
+		text-align: center;
+		max-width: 75%;
+		margin: 0 auto;
+	}
+
+	&__wrapper > div {
+		display: flex;
+		align-items: center;
+		column-gap: 0.5rem;
+		flex: 1 1 100%;
+		height: fit-content;
+	}
+
+	&__medallion {
+		display: none;
+	}
+
+	&__create-acc {
+		border: 1px solid $primary-color;
+		padding: 0.1rem 0.5rem;
+		font-size: 1rem;
+		height: 2rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $primary-color;
+		font-weight: 900;
+	}
+
+	&__sign-in {
+		padding: 0.1rem 0.5rem;
+		font-size: 1.2rem;
+		height: 2rem;
+		color: $secondary-color;
+		text-decoration: underline;
+		font-weight: 900;
+	}
+}
+
+.menu-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&__menu-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 3rem 0;
+
+		&-img {
+			max-width: 140px;
+			max-height: 140px;
+			object-fit: scale-down;
+		}
+	}
+
+	@media (min-width: 64em) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 75%;
+		margin: 0 auto 1rem auto;
+
+		&__menu-item {
+			flex-direction: column;
+			margin: 3rem;
+
+			&-img {
+				max-height: 200px;
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+.promo-section {
+	&__card {
+		flex-basis: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 2rem;
+		margin-bottom: 3rem;
+		border: 1px solid $primary-color-quarter-opacity;
+
+		& > * {
+			flex-basis: 100%;
+		}
+
+		&-bg-video {
+			width: 100%;
+		}
+
+		&-content {
+			margin: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			row-gap: 1rem;
+		}
+
+		&-btn {
+			background-color: $primary-color;
+			color: $white;
+		}
+	}
+
+	@media (min-width: 48em) {
+		display: flex;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+}
+
+.fav-orders-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 1rem 1rem 1rem;
+	position: relative;
+	height: 528px;
+
+	&::after {
+		content: "";
+		background-image: url("https://www.chipotle.com/content/dam/poc/order/images/backgrounds/pattern-ingredients.svg");
+		background-size: contain;
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		opacity: 0.7;
+		z-index: 1;
+	}
+
+	& > * {
+		position: relative;
+		z-index: 100;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 1rem;
+		margin: 2rem;
+		text-align: center;
+
+		& > p {
+			font-weight: 700;
+			font-size: 20px;
+			letter-spacing: normal;
+		}
+	}
+
+	&__cta-btn {
+		background-color: $primary-color;
+		color: $white;
+		padding: 1rem 2rem;
+		width: 100%;
+	}
+
+	&__slider {
+		margin: 0 -1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 2rem;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__card {
+		background-color: $white;
+		margin-bottom: 1rem;
+
+		& > img {
+			height: 186px;
+			width: 300px;
+			object-fit: cover;
+		}
+
+		& > p {
+			margin: 0.5rem;
+			height: 14px;
+			font-weight: 700;
+			font-size: 14px;
+		}
+	}
+
+	@media (min-width: 36em) {
+		&__cta-btn {
+			width: auto;
+		}
+
+		&__card {
+			& > img {
+				height: 279px;
+				width: 450px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.crowd-pleasers-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem;
+
+	&__cards {
+		margin: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 335px;
+		min-height: 298px;
+		box-shadow: 0 0 14px 2px #00000033;
+		background-color: $white;
+		padding: 1rem;
+		font-size: 14px;
+		font-stretch: expanded;
+		color: $primary-color;
+		word-wrap: break-word;
+
+		& > * {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			flex: 1 1 100%;
+			row-gap: 1rem;
+		}
+
+		&-title {
+			color: $white;
+			text-align: center;
+		}
+
+		&-text {
+			& > li {
+				display: inline;
+
+				&::before {
+					content: "\2022\00a0";
+					color: $secondary-color;
+					font-size: 14px;
+				}
+			}
+		}
+
+		&-btn {
+			background-color: $secondary-color;
+			color: $white;
+			font-size: 1.1rem;
+		}
+	}
+
+	@media (min-width: 48em) {
+		&__cards {
+			flex-direction: row;
+		}
+
+		&__card {
+			max-width: 500px;
+		}
+	}
+}
+
+#crowd-pleasers-section__catering-card {
+	background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/A_Catering-Tile_570x190@2x.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 42%;
+}
+#crowd-pleasers-section__group-order-card {
+	background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/Group-Ordering-Tile_570x190@2x.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 40%;
 }

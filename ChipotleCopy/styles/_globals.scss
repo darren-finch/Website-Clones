@@ -140,8 +140,9 @@ html {
 }
 
 body {
-	font-family: "Nunito", "Helvetica Neue", "Arial", "sans-serif",
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Nunito", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 	background-color: $background-color;
 	color: $primary-color;
 	letter-spacing: 0.05rem;
@@ -159,25 +160,28 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: "Trade Gothic LT Bold", "Helvetica Neue", "Arial", "sans-serif",
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Trade Gothic LT Bold", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 900;
+
+	@media (min-width: 75em) {
+		font-weight: 600;
+	}
 }
 
 h1,
 .h1 {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 h2,
 .h2 {
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 }
 
 h3,
 .h3 {
-	font-size: 2rem;
+	font-size: 1.25rem;
 }
 
 h4,
@@ -186,7 +190,33 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-size: 1.5rem;
+	font-size: 1rem;
+}
+
+@media (min-width: 75em) {
+	h1,
+	.h1 {
+		font-size: 3rem;
+	}
+
+	h2,
+	.h2 {
+		font-size: 2rem;
+	}
+
+	h3,
+	.h3 {
+		font-size: 1.5rem;
+	}
+
+	h4,
+	h5,
+	h6,
+	.h4,
+	.h5,
+	.h6 {
+		font-size: 1.25rem;
+	}
 }
 
 a,
@@ -197,15 +227,22 @@ a:visited {
 }
 
 p {
-	font-size: 22px;
+	font-size: 18px;
 }
 
 // LAYOUTS, ELEMENTS, THEN MODIFIERS
 
 .btn {
-	background-color: $primary-color;
-	color: $white;
-	padding: 0.8125rem 2.625rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	user-select: none;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.75rem 2rem;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 .a {
@@ -219,4 +256,17 @@ p {
 	height: 1px;
 	background-color: $primary-color;
 	opacity: 0.2;
+}
+
+.tag {
+	border-radius: 1em;
+	background-color: #451400;
+	color: #fff;
+	font-size: 0.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 0.93;
+	padding: 0.2em 0.5em;
+	width: fit-content;
+	margin: 0 auto;
 }

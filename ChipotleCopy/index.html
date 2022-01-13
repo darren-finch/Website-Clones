@@ -9,222 +9,193 @@
 	<body>
 		<header class="main-header">
 			<div class="main-header__logo-wrapper">
-				<img
-					class="main-header__hamburger"
-					src="./assets/menu-hamburger.svg"
-					alt="Hamburger menu"
-				/>
-				<img
-					class="main-header__logo"
-					src="./assets/cmg-medallion-logo.svg"
-					alt="Chipotle logo"
-				/>
-				<a href="#" class="main-header__sign-in-link">
+				<img class="main-header__hamburger" src="./assets/menu-hamburger.svg" alt="Hamburger menu" />
+				<img class="main-header__logo" src="./assets/cmg-medallion-logo.svg" alt="Chipotle logo" />
+				<a href="#" class="main-header__sign-in">
 					<img src="./assets/user-outline.svg" alt="User outline" />
 					<p class="main-header__sign-in-text">Sign In</p>
 				</a>
 			</div>
-			<nav class="main-header__nav-wrapper">
-				<ul class="main-header__nav-links">
-					<li class="main-header__nav-link">
-						<a href="#" class="main-header__nav-link-text">Order</a>
-					</li>
-				</ul>
-				<ul class="main-header__nav-links">
-					<li class="main-header__nav-link">
-						<a href="#" class="main-header__nav-link-text">Catering</a>
-					</li>
-				</ul>
-				<ul class="main-header__nav-links">
-					<li class="main-header__nav-link">
-						<a href="#" class="main-header__nav-link-text">Rewards</a>
-					</li>
-				</ul>
-				<ul class="main-header__nav-links">
-					<li class="main-header__nav-link">
-						<a href="#" class="main-header__nav-link-text">Our Values</a>
-					</li>
-				</ul>
-				<ul class="main-header__nav-links">
-					<li class="main-header__nav-link">
-						<a href="#" class="main-header__nav-link-text">Nutrition</a>
-					</li>
-				</ul>
+			<nav class="main-header__nav">
+				<a href="#" class="main-header__nav-link">Order</a>
+				<a href="#" class="main-header__nav-link">Catering</a>
+				<a href="#" class="main-header__nav-link">Rewards</a>
+				<a href="#" class="main-header__nav-link">Our Values</a>
+				<a href="#" class="main-header__nav-link">Nutrition</a>
 			</nav>
 			<div class="main-header__cta-wrapper">
-				<a href="#" class="main-header__cta-btn">
-					<img
-						src="./assets/pepper-small-white@3x.png"
-						alt="White Chipotle pepper"
-					/>
-					<span class="main-header__cta-btn-separator"></span>
-					Find A Chipotle
-				</a>
-				<img src="./assets/bag.svg" alt="Shopping bag" />
+				<div class="main-header__cta-btn-wrapper">
+					<div href="#" class="main-header__cta-btn">
+						<img class="main-header__cta-btn-logo" src="./assets/pepper-small-white@3x.png" alt="White Chipotle pepper" />
+						<span class="main-header__cta-btn-separator"></span>
+						<p class="main-header__cta-btn-text">Find A Chipotle</p>
+					</div>
+				</div>
+				<img class="main-header__bag" src="./assets/bag.svg" alt="Shopping bag" />
 			</div>
 		</header>
 		<section class="hero-section">
-			<div class="hero-section__overlay">
+			<video
+				playsinline=""
+				webkit-playsinline=""
+				autoplay="autoplay"
+				muted="muted"
+				loop="loop"
+				src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/menu-items/plant-based-chorizo/CHP_PBC_Homepage-Hero_Mobile.mp4"
+				class="hero-section__video-bg hero-section__video-bg--mobile"
+			></video>
+			<video
+				playsinline=""
+				webkit-playsinline=""
+				autoplay="autoplay"
+				muted="muted"
+				loop="loop"
+				src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/menu-items/plant-based-chorizo/CHP_PBC_Homepage-Hero_Desktop.mp4"
+				class="hero-section__video-bg hero-section__video-bg--desktop"
+			></video>
+			<div class="hero-section__content">
+				<p class="hero-section__text">Our best chorizo ever with all the deep, rich flavors you know and love...now 100% plant-based.</p>
+				<a class="btn hero-section__cta-btn" href="#">Order Now</a>
+			</div>
+		</section>
+		<section class="rewards-section">
+			<div class="rewards-section__wrapper">
+				<div>
+					<img class="rewards-section__medallion" src="./assets/pepper-medallion.svg" alt="Pepper medallion" />
+					<h3 class="rewards-section__text">Join chipotle rewards. Unwrap some free chipotle.</h3>
+				</div>
+				<div>
+					<a href="#" class="btn rewards-section__create-acc">Create an account</a>
+					OR
+					<a href="" class="btn rewards-section__sign-in">Sign in</a>
+				</div>
+			</div>
+		</section>
+		<section class="menu-section">
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/burrito.png" alt="Burrito" />
+				<h2>Burrito</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/bowl.png" alt="Burrito bowl" />
+				<h2>Burrito bowl</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/lifestyle.png" alt="Lifestyle bowl" />
+				<h2>Lifestyle bowl</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/quesadilla.png" alt="Quesadilla" />
+				<div>
+					<div class="tag">Digital Only</div>
+					<h2>Quesadilla</h2>
+				</div>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/salad.jpg" alt="Salad" />
+				<h2>Salad</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/tacos.jpg" alt="Tacos" />
+				<h2>Tacos</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/chips-quac.jpg" alt="Sides & Drinks" />
+				<h2>Sides & Drinks</h2>
+			</article>
+			<article class="menu-section__menu-item">
+				<img class="menu-section__menu-item-img" src="./assets/kidsmeal.jpg" alt="Kid's Meal" />
+				<h2>Kid's Meal</h2>
+			</article>
+		</section>
+		<section class="promo-section">
+			<div class="promo-section__card">
 				<video
-					data-v-7a52e834=""
-					id="cmg-hero-video"
+					playsinline=""
+					webkit-playsinline=""
+					muted="muted"
+					autoplay="autoplay"
+					loop="loop"
+					src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/menu-items/plant-based-chorizo/CHP_PBC_SecondaryTout_Mobile.mp4"
+					class="promo-section__card-bg-video"
+				></video>
+				<div class="promo-section__card-content">
+					<h2>THE RICH FLAVOR OF CHORIZO, NOW PLANT-BASED</h2>
+					<p>Enjoy the flavors of real ingredients like Spanish smoked paprika, adobo chili peppers, and garlic. Plus, 16g of pea protein.</p>
+					<a href="#" class="btn promo-section__card-btn">Order Now</a>
+				</div>
+			</div>
+			`
+			<div class="promo-section__card">
+				<video
 					playsinline=""
 					webkit-playsinline=""
 					autoplay="autoplay"
 					muted="muted"
 					loop="loop"
-					src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/menu-items/plant-based-chorizo/CHP_PBC_Homepage-Hero_Mobile.mp4"
-					class="hero-section__bg"
+					src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/lifestyle-bowls/lsb-2022/BetterYou-ToutHorizontal.mp4"
+					class="promo-section__card-bg-video"
 				></video>
-			</div>
-			<div class="hero-section__content">
-				<p class="hero-section__text">
-					Our best chorizo ever with all the deep, rich flavors you know and
-					love...now 100% plant-based.
-				</p>
-				<a class="hero-section__cta-btn" href="#"></a>
-			</div>
-		</section>
-		<section class="rewards-section">
-			<div>
-				<img src="./assets/pepper-medallion.svg" alt="" />
-				<p class="rewards-section__text"></p>
-			</div>
-			<div>
-				<a href="#" class="rewards-section__create-acc">Create an account</a>
-				<a href="" class="rewards-section__sign-in">Sign in</a>
-			</div>
-		</section>
-		<section class="menu-section">
-			<div>
-				<article>
-					<img src="./assets/burrito.png" alt="Burrito" />
-					<h2>Burrito</h2>
-				</article>
-				<article>
-					<img src="./assets/bowl.png" alt="Burrito bowl" />
-					<h2>Burrito bowl</h2>
-				</article>
-				<article>
-					<img src="./assets/lifestyle.png" alt="Lifestyle bowl" />
-					<h2>Lifestyle bowl</h2>
-				</article>
-			</div>
-			<div>
-				<article>
-					<img src="./assets/quesadilla.png" alt="Quesadilla" />
-					<h2>Quesadilla</h2>
-				</article>
-				<article>
-					<img src="./assets/salad.jpg" alt="Salad" />
-					<h2>Salad</h2>
-				</article>
-				<article>
-					<img src="./assets/tacos.jpg" alt="Tacos" />
-					<h2>Tacos</h2>
-				</article>
-			</div>
-			<div>
-				<article>
-					<img src="./assets/chips-quac.jpg" alt="Sides & Drinks" />
-					<h2>Sides & Drinks</h2>
-				</article>
-				<article>
-					<img src="./assets/kidsmeal.jpg" alt="Kid's Meal" />
-					<h2>Kid's Meal</h2>
-				</article>
-			</div>
-			<div class="menu-section__cards">
-				<div class="menu-section__card">
-					<video
-						playsinline=""
-						webkit-playsinline=""
-						muted="muted"
-						autoplay="autoplay"
-						loop="loop"
-						src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/menu-items/plant-based-chorizo/CHP_PBC_SecondaryTout_Mobile.mp4"
-						class="menu-section__card-bg-video"
-					></video>
-					<h3>THE RICH FLAVOR OF CHORIZO, NOW PLANT-BASED</h3>
-					<p>
-						Enjoy the flavors of real ingredients like Spanish smoked paprika,
-						adobo chili peppers, and garlic. Plus, 16g of pea protein.
-					</p>
-					<a href="#" class="menu__card-btn">Order Now</a>
-				</div>
-				`
-				<div class="menu-section__card">
-					<video
-						playsinline=""
-						webkit-playsinline=""
-						autoplay="autoplay"
-						muted="muted"
-						loop="loop"
-						src="https://www.chipotle.com/content/dam/chipotle/global-site-design/en/lifestyle-bowls/lsb-2022/BetterYou-ToutHorizontal.mp4"
-						class="menu-section__card-bg-video"
-					></video>
-					<h3>TRY NEW LIFESTYLE BOWLS</h3>
-					<p>
-						Be Keto curious or let plant power be your superpower. Whatever your
-						goal may be, we got the right Lifestyle Bowl filled with
-						nutrient-dense, flavor-packed ingredients.
-					</p>
-					<a href="#" class="menu-section__card-btn">Order Now</a>
+				<div class="promo-section__card-content">
+					<h2>TRY NEW LIFESTYLE BOWLS</h2>
+					<p>Be Keto curious or let plant power be your superpower. Whatever your goal may be, we got the right Lifestyle Bowl filled with nutrient-dense, flavor-packed ingredients.</p>
+					<a href="#" class="btn promo-section__card-btn">Order Now</a>
 				</div>
 			</div>
 		</section>
 		<section class="fav-orders-section">
-			<h2>1-Tap Orders</h2>
-			<p>
-				Sometimes it's hard to choose. We made it easy with these favorites.
-			</p>
-			<a href="#" class="fav-orders-section__btn">Find A Chipotle</a>
+			<div class="fav-orders-section__content">
+				<h1>1-Tap Orders</h1>
+				<p>Sometimes it's hard to choose. We made it easy with these favorites.</p>
+				<a href="#" class="btn fav-orders-section__cta-btn">Find A Chipotle</a>
+			</div>
 			<div class="fav-orders-section__slider">
 				<article class="fav-orders-section__card">
-					<img
-						src="./assets/tai-verdes-bowl.jpg"
-						alt="Tai Verdes and his signature bowl."
-					/>
+					<img src="./assets/tai-verdes-bowl.jpg" alt="Tai Verdes and his signature bowl." />
 					<p>Tai Verdes Bowl</p>
 				</article>
 				<article class="fav-orders-section__card">
-					<img
-						src="./assets/juju-smith-schuster-bowl.jpg"
-						alt="JuJu Smith-Schuster and his signature bowl."
-					/>
+					<img src="./assets/juju-smith-schuster-bowl.jpg" alt="JuJu Smith-Schuster and his signature bowl." />
 					<p>JuJu Smith-Schuster Bowl</p>
 				</article>
 				<article class="fav-orders-section__card">
-					<img
-						src="./assets/alex-morgan-bowl.jpg"
-						alt="Alex Morgan and her signature bowl."
-					/>
+					<img src="./assets/alex-morgan-bowl.jpg" alt="Alex Morgan and her signature bowl." />
 					<p>Alex Morgan Bowl</p>
 				</article>
 			</div>
 		</section>
 		<section class="crowd-pleasers-section">
 			<h2>Crowd Pleasers</h2>
-			<article class="crowd-pleasers-section__card">
-				<div class="crowd-pleasers-section__card-overlay">
-					<img src="./assets/A_Catering-Tile_570x190@2x.jpeg" alt="" />
-				</div>
-				<p>
-					From 6 to 200 people Starting at $8.25* / person Build Your Own
-					Burritos by the Box Chips & Salsa Requires 24 hours notice
-				</p>
-				<a href="#" class="crowd-pleasers-section__btn">Explore Catering</a>
-			</article>
-			<article class="crowd-pleasers-section__card">
-				<div class="crowd-pleasers-section__card-overlay">
-					<img src="./assets/Group-Ordering-Tile_570x190@2x.jpg" alt="" />
-				</div>
-				<p>
-					Invite up to 20 people Normal menu pricing Full menu Personalized
-					meals Organizer pays Order and eat today
-				</p>
-				<a href="#" class="crowd-pleasers-section__btn">Start Order Now</a>
-			</article>
+			<div class="crowd-pleasers-section__cards">
+				<article id="crowd-pleasers-section__catering-card" class="crowd-pleasers-section__card">
+					<h2 class="crowd-pleasers-section__card-title">Catering</h2>
+					<div class="crowd-pleasers-section__card-content">
+						<ul class="crowd-pleasers-section__card-text">
+							<li>From 6 to 200 people</li>
+							<li>Starting at $8.25* / person</li>
+							<li>Build Your Own</li>
+							<li>Burritos by the Box</li>
+							<li>Chips &amp; Salsa</li>
+							<li><b>Requires 24 hours notice</b></li>
+						</ul>
+						<a href="#" class="btn crowd-pleasers-section__card-btn">Explore Catering</a>
+					</div>
+				</article>
+				<article id="crowd-pleasers-section__group-order-card" class="crowd-pleasers-section__card">
+					<h2 class="crowd-pleasers-section__card-title">Group Order</h2>
+					<div class="crowd-pleasers-section__card-content">
+						<ul class="crowd-pleasers-section__card-text">
+							<li>Invite up to 20 people&nbsp;</li>
+							<li>Normal menu pricing</li>
+							<li>Full menu&nbsp;</li>
+							<li>Personalized meals&nbsp;</li>
+							<li>Organizer pays</li>
+							<li><b>Order and eat today</b></li>
+						</ul>
+						<a href="#" class="btn crowd-pleasers-section__card-btn">Start Order Now</a>
+					</div>
+				</article>
+			</div>
 		</section>
 		<footer class="main-footer">
 			<div>
@@ -264,10 +235,7 @@
 					<div class="main-footer__download-app-wrapper">
 						<h4>Download Our App</h4>
 						<div>
-							<img
-								src="./assets/apple-store.png"
-								alt="Download on the App Store"
-							/>
+							<img src="./assets/apple-store.png" alt="Download on the App Store" />
 							<img src="./assets/google-play.png" alt="Get it on Google Play" />
 						</div>
 					</div>

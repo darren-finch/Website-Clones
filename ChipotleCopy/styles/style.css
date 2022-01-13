@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-header__cta-btn-separator {
   margin-left: 5px;
   margin-right: 10px;
@@ -148,6 +149,8 @@ html {
 
 body {
   font-family: "Nunito", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   background-color: #fff;
   color: #451500;
   letter-spacing: 0.05rem;
@@ -167,22 +170,38 @@ h6,
 .h6 {
   font-family: "Trade Gothic LT Bold", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 900;
+}
+@media (min-width: 75em) {
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 600;
+  }
 }
 
 h1,
 .h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h2,
 .h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 h3,
 .h3 {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 h4,
@@ -191,9 +210,34 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
+@media (min-width: 75em) {
+  h1,
+.h1 {
+    font-size: 3rem;
+  }
+
+  h2,
+.h2 {
+    font-size: 2rem;
+  }
+
+  h3,
+.h3 {
+    font-size: 1.5rem;
+  }
+
+  h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    font-size: 1.25rem;
+  }
+}
 a,
 a:hover,
 a:visited {
@@ -202,13 +246,23 @@ a:visited {
 }
 
 p {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .btn {
-  background-color: #451500;
-  color: #fff;
-  padding: 0.8125rem 2.625rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .a {
@@ -224,26 +278,472 @@ p {
   opacity: 0.2;
 }
 
+.tag {
+  border-radius: 1em;
+  background-color: #451400;
+  color: #fff;
+  font-size: 0.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.93;
+  padding: 0.2em 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  height: 100px;
 }
 .main-header > * {
   display: flex;
   align-items: center;
+  flex: 1 1 100%;
+}
+@media (min-width: 75em) {
+  .main-header__hamburger {
+    display: none;
+  }
+}
+@media (max-width: 23.5em) {
+  .main-header__hamburger {
+    margin-right: 1rem;
+  }
 }
 .main-header__logo-wrapper {
+  margin-left: 1rem;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
 }
 .main-header__logo {
   width: 58px;
 }
-.main-header__sign-in-link {
+@media (max-width: 23.5em) {
+  .main-header__logo {
+    display: none;
+  }
+}
+@media (min-width: 75em) {
+  .main-header__logo {
+    width: 81px;
+  }
+}
+.main-header__sign-in {
   display: none;
 }
-.main-header__nav-wrapper {
+.main-header__sign-in-text {
+  color: #fff;
+  font-weight: 500;
+  color: #786259;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 36em) {
+  .main-header__sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.main-header__nav {
   display: none;
+}
+@media (min-width: 75em) {
+  .main-header__nav {
+    display: flex;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+}
+.main-header__nav-link {
+  font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 700;
+  color: #451400;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  flex-grow: 1;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.main-header__nav-link-text {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 900;
+  color: #451400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.main-header__cta-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+@media (min-width: 75em) {
+  .main-header__cta-wrapper {
+    justify-content: flex-end;
+  }
+}
+.main-header__cta-btn {
+  background: #451500;
+  display: inline-flex;
+  border-radius: 1.5em;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  max-height: 40px;
+  min-width: 200px;
+  min-height: 40px;
+  align-items: center;
+  transition: all 0.2s;
+}
+.main-header__cta-btn-logo {
+  height: 26px;
+  width: 26px;
+  margin-left: 10px;
+}
+.main-header__cta-btn-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.8125rem;
+  letter-spacing: 1.15px;
+}
+
+.hero-section {
+  height: 450px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section__video-bg {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 100;
+  width: 100%;
+  height: inherit;
+}
+.hero-section__video-bg--mobile {
+  display: block;
+}
+.hero-section__video-bg--desktop {
+  display: none;
+}
+.hero-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 460px;
+  height: 75%;
+  text-align: center;
+  line-height: 2rem;
+  row-gap: 1rem;
+  z-index: 1;
+}
+.hero-section__cta-btn {
+  color: #fff;
+  background-color: #ad2117;
+  width: 300px;
+}
+@media (min-width: 40em) {
+  .hero-section__video-bg--mobile {
+    display: none;
+  }
+  .hero-section__video-bg--desktop {
+    display: block;
+  }
+}
+
+.rewards-section {
+  border-bottom: 1px solid rgba(71, 21, 0, 0.25);
+}
+.rewards-section > div {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  text-align: center;
+  max-width: 75%;
+  margin: 0 auto;
+}
+.rewards-section__wrapper > div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  flex: 1 1 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.rewards-section__medallion {
+  display: none;
+}
+.rewards-section__create-acc {
+  border: 1px solid #451500;
+  padding: 0.1rem 0.5rem;
+  font-size: 1rem;
+  height: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #451500;
+  font-weight: 900;
+}
+.rewards-section__sign-in {
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  height: 2rem;
+  color: #a76820;
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-section__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.menu-section__menu-item-img {
+  max-width: 140px;
+  max-height: 140px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+@media (min-width: 64em) {
+  .menu-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 75%;
+    margin: 0 auto 1rem auto;
+  }
+  .menu-section__menu-item {
+    flex-direction: column;
+    margin: 3rem;
+  }
+  .menu-section__menu-item-img {
+    max-height: 200px;
+    max-width: 300px;
+  }
+}
+
+.promo-section__card {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(71, 21, 0, 0.25);
+}
+.promo-section__card > * {
+  flex-basis: 100%;
+}
+.promo-section__card-bg-video {
+  width: 100%;
+}
+.promo-section__card-content {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem;
+}
+.promo-section__card-btn {
+  background-color: #451500;
+  color: #fff;
+}
+@media (min-width: 48em) {
+  .promo-section {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+.fav-orders-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1rem 1rem 1rem;
+  position: relative;
+  height: 528px;
+}
+.fav-orders-section::after {
+  content: "";
+  background-image: url("https://www.chipotle.com/content/dam/poc/order/images/backgrounds/pattern-ingredients.svg");
+  background-size: contain;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  z-index: 1;
+}
+.fav-orders-section > * {
+  position: relative;
+  z-index: 100;
+}
+.fav-orders-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+.fav-orders-section__content > p {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: normal;
+}
+.fav-orders-section__cta-btn {
+  background-color: #451500;
+  color: #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+.fav-orders-section__slider {
+  margin: 0 -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.fav-orders-section__slider::-webkit-scrollbar {
+  display: none;
+}
+.fav-orders-section__card {
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.fav-orders-section__card > img {
+  height: 186px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fav-orders-section__card > p {
+  margin: 0.5rem;
+  height: 14px;
+  font-weight: 700;
+  font-size: 14px;
+}
+@media (min-width: 36em) {
+  .fav-orders-section__cta-btn {
+    width: auto;
+  }
+  .fav-orders-section__card > img {
+    height: 279px;
+    width: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.crowd-pleasers-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+.crowd-pleasers-section__cards {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.crowd-pleasers-section__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 335px;
+  min-height: 298px;
+  box-shadow: 0 0 14px 2px #00000033;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 14px;
+  font-stretch: expanded;
+  color: #451500;
+  word-wrap: break-word;
+}
+.crowd-pleasers-section__card > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 100%;
+  row-gap: 1rem;
+}
+.crowd-pleasers-section__card-title {
+  color: #fff;
+  text-align: center;
+}
+.crowd-pleasers-section__card-text > li {
+  display: inline;
+}
+.crowd-pleasers-section__card-text > li::before {
+  content: "• ";
+  color: #a76820;
+  font-size: 14px;
+}
+.crowd-pleasers-section__card-btn {
+  background-color: #a76820;
+  color: #fff;
+  font-size: 1.1rem;
+}
+@media (min-width: 48em) {
+  .crowd-pleasers-section__cards {
+    flex-direction: row;
+  }
+  .crowd-pleasers-section__card {
+    max-width: 500px;
+  }
+}
+
+#crowd-pleasers-section__catering-card {
+  background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/A_Catering-Tile_570x190@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 42%;
+}
+
+#crowd-pleasers-section__group-order-card {
+  background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/Group-Ordering-Tile_570x190@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
 }/*# sourceMappingURL=style.css.map */
