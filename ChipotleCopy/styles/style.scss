@@ -67,7 +67,8 @@
 	}
 
 	&__nav-link {
-		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+			Segoe UI Emoji, Segoe UI Symbol;
 		font-weight: 700;
 		color: #451400;
 		text-transform: uppercase;
@@ -83,7 +84,8 @@
 		position: relative;
 		cursor: pointer;
 		text-decoration: none;
-		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+		font-family: Trade Gothic LT Bold, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+			Segoe UI Emoji, Segoe UI Symbol;
 		font-weight: 900;
 		color: #451400;
 		text-transform: uppercase;
@@ -361,7 +363,7 @@
 		margin: 0 -1rem;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		column-gap: 2rem;
 		overflow-x: scroll;
 		overflow-y: hidden;
@@ -397,10 +399,16 @@
 
 		&__card {
 			& > img {
-				height: 279px;
-				width: 450px;
+				max-height: 279px;
+				max-width: 450px;
 				object-fit: cover;
 			}
+		}
+	}
+
+	@media (min-width: 40em) {
+		&__slider {
+			justify-content: center;
 		}
 	}
 }
@@ -489,4 +497,38 @@
 	background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/Group-Ordering-Tile_570x190@2x.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 40%;
+}
+
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: $primary-color;
+	color: $white;
+	padding: 1rem;
+
+	& > * {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__nav-links {
+		gap: 1rem;
+	}
+	&__main-link {
+		color: $white;
+	}
+
+	&__about-wrapper {
+		gap: 1rem;
+		flex-direction: row;
+		max-width: 75%;
+
+		& > div > a {
+			color: $white;
+		}
+	}
+
+	&__connect-wrapper {
+	}
 }

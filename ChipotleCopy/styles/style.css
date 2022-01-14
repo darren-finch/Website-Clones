@@ -634,7 +634,7 @@ p {
   margin: 0 -1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   overflow-x: scroll;
@@ -665,10 +665,15 @@ p {
     width: auto;
   }
   .fav-orders-section__card > img {
-    height: 279px;
-    width: 450px;
+    max-height: 279px;
+    max-width: 450px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+@media (min-width: 40em) {
+  .fav-orders-section__slider {
+    justify-content: center;
   }
 }
 
@@ -746,4 +751,31 @@ p {
   background-image: url("https://www.chipotle.com/content/dam/poc/order/images/large-order-promo/Group-Ordering-Tile_570x190@2x.jpg");
   background-repeat: no-repeat;
   background-size: 100% 40%;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #451500;
+  color: #fff;
+  padding: 1rem;
+}
+.main-footer > * {
+  display: flex;
+  flex-direction: column;
+}
+.main-footer__nav-links {
+  gap: 1rem;
+}
+.main-footer__main-link {
+  color: #fff;
+}
+.main-footer__about-wrapper {
+  gap: 1rem;
+  flex-direction: row;
+  max-width: 75%;
+}
+.main-footer__about-wrapper > div > a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
