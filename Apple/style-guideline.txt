@@ -1,0 +1,13 @@
+Nav bg color: #1d1d1f
+Nav text color: #111;
+
+Main colors:
+Background color: #fbfbfd;
+Text color: #1d1d1f;
+
+Footer bg color: #f5f5f7F
+Footer border: #d2d2d7;
+Footer text: #6e6e73;
+Footer link: #424245;
+Footer directory title color: #1d1d1f;
+Footer directory title color hover: #000;

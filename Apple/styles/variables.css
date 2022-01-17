@@ -1,0 +1,13 @@
+:root {
+	--content-height: auto;
+	--columns: 1;
+	--gutter-width: 12px;
+	--gutter-half-width: 6px;
+	--gutter-and-half-width: 18px;
+	--gutter-color: #fff;
+	--double-edge-border-width: 0px;
+	--edge-border-width: 0px;
+	--background-color: #fbfbfd;
+	--text-color: #1d1d1f;
+	--edge-border-width-fallback: 0px;
+}
